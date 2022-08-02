@@ -62,7 +62,7 @@ def fuels(fuel):
 
 
 def heatup(heat):
-    if heat == 30:
+    if heat == 15:
         font = pygame.font.SysFont(
             'comicsans', 30, bold=True, italic=False)
         text = font.render('Overheated !!!!!!!!!!!', 1, (255, 255, 255))
@@ -136,7 +136,10 @@ while run:
         fuels(int(fuel))
         heatup(int(burn))
         vel(int(velo))
+        if velo > 0:
+            time += 0.2
         scores(int(time))
+
     pygame.display.flip()
     theClock.tick(1000)
     win.blit(char, (shuttle.x, shuttle.y))
