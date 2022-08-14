@@ -18,4 +18,4 @@ pip install pygame
 The game stops when:
 
 * The fuel counter reaches 0
-* The heat counter reaches 30
+* The heat counter reaches 15
